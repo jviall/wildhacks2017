@@ -22,12 +22,13 @@
           <p height="100%">Scrolling Text Here</p>
       </div>
   </div>
-  <div class="buttons" >
-      <button id="listen" class="btn-danger buttons" onclick="startRecord(function(res) {
-            //callMe(res);
-      })">Start</button>
-      <button id="stopListen" class="btn-secondary buttons" onclick="stopRecording()">Stop</button>
-  </div>
+
+  <button id="listen" class="btn-danger buttons" onclick="startRecord(function(res) {
+        //callMe(res);
+        console.log('res:' + res);
+  })">Start</button>
+  <button id="stopListen" class="btn-secondary buttons" onclick="stopRecording()">Stop</button>
+
   <script type="text/javascript">
 
    //set up voice recognition variable

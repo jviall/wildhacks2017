@@ -13,14 +13,14 @@ function startRecord(callback){
         console.log('You said: ', event.results[0][0].transcript);
         callback(event.results[0][0].transcript);
         if(shouldRecord){
-            startRecord(function () {
-
+            startRecord(function (res) {
+                callback(res);
             });
         }
 
         //recognition.start();
     };
-    callback();
+    //callback();
 }
 function stopRecording(recognition){
     shouldRecord = false;
