@@ -14,13 +14,20 @@
 <body>
   <h1>{{title}}</h1>
   <p>Welcome to {{name}}</p>
-  <canvas id="mainCanvas" width="100" height="100" style="background-color: #000;"></canvas>
-
-  <button id="listen" onclick="startRecord(function(res) {
-        //callMe(res);
-  })">Start</button>
-  <button id="stopListen" onclick="stopRecording()">Stop</button>
-
+  <div class="app-container">
+      <div class="canvas">
+        <canvas id="mainCanvas" width="100" height="100" style="background-color: #000;"></canvas>
+      </div>
+      <div height="100%" id="speechBox">
+          <p height="100%">Scrolling Text Here</p>
+      </div>
+  </div>
+  <div class="buttons" >
+      <button id="listen" class="btn-danger buttons" onclick="startRecord(function(res) {
+            //callMe(res);
+      })">Start</button>
+      <button id="stopListen" class="btn-secondary buttons" onclick="stopRecording()">Stop</button>
+  </div>
   <script type="text/javascript">
 
    //set up voice recognition variable
