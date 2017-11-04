@@ -5,12 +5,33 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" herf="/public/stylesheets/style.css">
   <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
+  <script src="/javascripts/pixi.min.js"></script>
 </head>
 <body>
   <h1>{{title}}</h1>
   <p>Welcome to {{name}}</p>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
-  <script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script> -->
+  <script type="text/javascript">
+    var type = "WebGL"
+    if(!PIXI.utils.isWebGLSupported()){
+      type = "canvas"
+    }
+
+    PIXI.utils.sayHello(type)
+  </script>
+  <script type="text/javascript">
+  //Create the renderer
+var renderer = PIXI.autoDetectRenderer(920, 880);
+
+//Add the canvas to the HTML document
+document.body.appendChild(renderer.view);
+
+//Create a container object called the `stage`
+var stage = new PIXI.Container();
+
+//Tell the `renderer` to `render` the `stage`
+renderer.render(stage);
+
   </script>
 </body>
 </html>
