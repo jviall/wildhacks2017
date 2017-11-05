@@ -17,7 +17,6 @@ function startRecord(callback){
                 callback(res);
             });
         }
-
         //recognition.start();
     };
     //callback();
