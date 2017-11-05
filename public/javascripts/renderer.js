@@ -1,5 +1,5 @@
 var forest = false, cave = false, bpotion = false, box = false, 
-    fairy = false, skull = false, gold = false, mace = false,;
+    fairy = false, skull = false, gold = false, mace = false;
 function backgroundToggle(fileName) {
     var element = document.getElementById("mainCanvas");
     if(fileName == "forest_backdrop.jpg"){
