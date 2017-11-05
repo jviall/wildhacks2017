@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" herf="/public/stylesheets/style.css">
   <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
   <script src="/javascripts/pixi.min.js"></script>
+  <script src="/javascripts/compromise.min.js"></script>
   <script src="/javascripts/listen.js"></script>
   <script src="/javascripts/nlp.js"></script>
   <script src="/javascripts/renderer.js"></script>
@@ -23,8 +24,10 @@
   </div>
 
   <button id="listen" class="btn-danger buttons" onclick="startRecord(function(res) {
-        //callMe(res);
-        console.log('res:' + res);
+        myNlp(res, function() {
+          
+        });
+        //console.log('res:' + res);
   })">Start</button>
   <button id="stopListen" class="btn-secondary buttons" onclick="stopRecording()">Stop</button>
 
