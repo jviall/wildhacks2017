@@ -1,5 +1,5 @@
 var forest = false, cave = false, bpotion = false, box = false, 
-    fairy = false;
+    fairy = false, skull = false, gold = false, mace = false,;
 function backgroundToggle(fileName) {
     var element = document.getElementById("mainCanvas");
     if(fileName == "forest_backdrop.jpg"){
@@ -9,24 +9,45 @@ function backgroundToggle(fileName) {
         }
     }
     else if(fileName == "cavern_backdrop.jpg"){
-        element.classList.toggle("cave");
+        if(!cave){
+            element.classList.toggle("cave");
+            cave = true;
+        }
     }
     else if(fileName == "blue_potion.png"){
-        document.getElementById("blue_potion").classList.toggle("display");
+        if(!bpotion){
+            document.getElementById("blue_potion").classList.toggle("display");
+            bpotion = true;
+        }
     }
     else if(fileName == "treasure_box.png"){
-        document.getElementById("treasure_chest").classList.toggle("display");
+        if(!box){
+            document.getElementById("treasure_chest").classList.toggle("display");
+            box = true;
+        }
     } 
     else if(fileName == "fairy.png"){
-        document.getElementById("fairy").classList.toggle("display");
+        if(!fairy){
+            document.getElementById("fairy").classList.toggle("display");
+            fairy = true;
+        }
     }
     else if(fileName == "skull.png"){
-        document.getElementById("skull").classList.toggle("display");
+        if(!skull){
+            document.getElementById("skull").classList.toggle("display");
+            skull = true;
+        }
     }
     else if(fileName == "gold_mask.png"){
-        document.getElementById("gold_mask").classList.toggle("display");
+        if(!gold){
+            document.getElementById("gold_mask").classList.toggle("display");
+            gold = true;
+        }
     }
     else if(fileName == "mace.png"){
-        document.getElementById("mace").classList.toggle("display");
+        if(!mace){
+            document.getElementById("mace").classList.toggle("display");
+            mace = true;
+        }
     }
 }
