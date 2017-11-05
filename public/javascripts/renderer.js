@@ -32,4 +32,10 @@ function backgroundToggle(fileName) {
     else if(fileName == "fairy.png"){
         document.getElementById("fairy").classList.toggle("display");
     }
+    else if(fileName == "scroll.png"){
+        document.getElementById("scroll").classList.toggle("display");
+    }
+    else if(fileName == "ring.png"){
+        document.getElementById("ring").classList.toggle("display");
+    }
 }
