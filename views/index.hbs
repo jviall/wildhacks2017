@@ -19,12 +19,13 @@
   <div class="buttons">
       <button id="listen" class="btn-danger buttons" onclick="startRecord(function(res) {
             //callMe(res);
-            console.log('res:' + res);
+            //console.log('res:' + res);
+            var fixed = res.charAt(0).toUpperCase() + res.slice(1) + '.';
             //appends to scrolling text
             myNlp(res, function() {
 
             });
-            var fragment = create('<p class=&quot;scrolling&quot;>' + res + '</p>');
+            var fragment = create('<p class=&quot;scrolling&quot;>' + fixed + '</p>');
             document.getElementById('append-here').appendChild(fragment)
             //console.log('res:' + res);
       })">Start</button>
