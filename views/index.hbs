@@ -8,35 +8,34 @@
   <script src="/javascripts/pixi.min.js"></script>
   <script src="/javascripts/listen.js"></script>
   <script src="/javascripts/nlp.js"></script>
+  <script src="/javascripts/renderer.js"></script>
 </head>
 <body>
   <h1>{{title}}</h1>
   <p>Welcome to {{name}}</p>
-  <button id="listen" onclick="startRecord(function(res) {
-        nlp(res);
+  <div class="app-container">
+      <div class="canvas">
+        <canvas id="mainCanvas" width="100" height="100" style="background-color: #000;"></canvas>
+      </div>
+      <div height="100%" id="speechBox">
+          <p height="100%">Scrolling Text Here</p>
+      </div>
+  </div>
+
+  <button id="listen" class="btn-danger buttons" onclick="startRecord(function(res) {
+        //callMe(res);
+        console.log('res:' + res);
   })">Start</button>
-  <button id="stopListen" onclick="stopRecording()">Stop</button>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script> -->
+  <button id="stopListen" class="btn-secondary buttons" onclick="stopRecording()">Stop</button>
+
   <script type="text/javascript">
 
    //set up voice recognition variable
 
-    var type = "WebGL"
+    var type = "WebGL";
     if(!PIXI.utils.isWebGLSupported()){
       type = "canvas"
     }
-
-    PIXI.utils.sayHello(type)
-
-  //Create the renderer
-    var renderer = PIXI.autoDetectRenderer(920, 880);
-
-    //Add the canvas to the HTML document
-    document.body.appendChild(renderer.view);
-
-    //Create a container object called the `stage`
-    var stage = new PIXI.Container();
-    renderer.render(stage);
   </script>
 </body>
 </html>
