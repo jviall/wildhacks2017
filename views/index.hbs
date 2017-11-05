@@ -14,20 +14,28 @@
 <body>
   <h1>{{title}}</h1>
   <p>Welcome to {{name}}</p>
-  <div class="app-container">
-      <div class="canvas">
-        <canvas id="mainCanvas" width="100" height="100" style="background-color: #000;"></canvas>
-      </div>
-      <div height="100%" id="speechBox">
-          <p height="100%">Scrolling Text Here</p>
-      </div>
-  </div>
 
   <button id="listen" class="btn-danger buttons" onclick="startRecord(function(res) {
         //callMe(res);
         console.log('res:' + res);
+        //appends to scrolling text
+        var fragment = create('<p>' + res + '</p>');
+        document.getElementById('append-here').appendChild(fragment)
   })">Start</button>
   <button id="stopListen" class="btn-secondary buttons" onclick="stopRecording()">Stop</button>
+
+  <div class="app-container">
+      <div class="canvas">
+        <canvas id="mainCanvas" style="background-color: #000;"></canvas>
+      </div>
+      <div style="position: relative; height:720px" id="speechBox" >
+          <marquee id="append-here" class="GeneratedMarquee" direction="up" scrollamount="2" behavior="scroll">
+              <p>Pebble will never rise from the ashes</p>
+              <p>hehe</p>
+
+          </marquee>
+      </div>
+  </div>
 
   <script type="text/javascript">
 

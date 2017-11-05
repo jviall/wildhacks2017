@@ -26,6 +26,20 @@ function stopRecording(recognition){
     shouldRecord = false;
 }
 
+// generate HTML for scrolling text:
+
+
+function create(htmlStr) {
+    var frag = document.createDocumentFragment(),
+        temp = document.createElement('div');
+    temp.innerHTML = htmlStr;
+    while (temp.firstChild) {
+        frag.appendChild(temp.firstChild);
+    }
+    return frag;
+}
+
+
 
 
 
