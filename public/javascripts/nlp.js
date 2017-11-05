@@ -7,6 +7,8 @@ var text = { forest: ds_sprites.backdrops.forest_backdrop,
 			golden_mask: ds_sprites.objects.golden_mask, 
 			skull: ds_sprites.objects.skull,
 			cave: ds_sprites.backdrops.cavern_backdrop,
+			scroll: ds_sprites.objects.scroll,
+			ring: ds_sprites.objects.ring,
 			fairy: ds_sprites.objects.fairy};
 
 function getNouns(noun,callback){

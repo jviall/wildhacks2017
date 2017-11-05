@@ -177,7 +177,17 @@ var ds_sprites = {
             x : 34,
             y : 46,
             count : 0
-        }, 
+        },
+        ring : {
+            name : 'ring',
+            fileName : 'ring.png',
+            fileType : 'object',
+            scale : 1.0,
+            sky : false,
+            x : 34,
+            y : 46,
+            count : 0
+        },
         skull : {
             name : 'skull',
             fileName : 'skull.png',
