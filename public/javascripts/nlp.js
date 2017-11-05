@@ -3,9 +3,10 @@ var text = { forest: ds_sprites.backdrops.forest_backdrop,
 			treasure_chest: ds_sprites.objects.treasure_box , 
 			sword: ds_sprites.objects.sword, 
 			mace: ds_sprites.objects.mace, 
-			potion: ds_sprites.objects.red_potion, 
+			potion: ds_sprites.objects.blue_potion,
 			golden_mask: ds_sprites.objects.golden_mask, 
-			skull: ds_sprites.objects.skull, 
+			skull: ds_sprites.objects.skull,
+			cave: ds_sprites.backdrops.cavern_backdrop,
 			fairy: ds_sprites.objects.fairy};
 
 function getNouns(noun,callback){

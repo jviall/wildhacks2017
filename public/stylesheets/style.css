@@ -7,7 +7,7 @@ a {
   color: #00B7FF;
 }
 
-.canvas {
+.canvas{
     float : left;
     width : auto;
     display: inline-block;
@@ -16,7 +16,38 @@ a {
     box-sizing: border-box;
     margin : 0 10px 0 0 ;
     padding : 0;
+    width : 70%;
+    background-color: #000000;
+    height : 50%;
 }
+
+.forest {
+    background-image: url("../images/backdrops/forest_backdrop.jpg");
+    width:100%;
+    height:715px;
+}
+
+.cave {
+    background-image: url("../images/backdrops/cavern_backdrop.jpg");
+    width:100%;
+    height:715px;
+}
+
+#blue_potion{
+    background: transparent;
+    height:100px;
+    width: 40px;
+    margin-left: 52%;
+    margin-top: 32%;
+    display: initial;
+}
+
+/*.display{
+    display: initial;
+}*/
+
+
+
 #speechBox {
     overflow : hidden;
     display : block;

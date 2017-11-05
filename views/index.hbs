@@ -7,7 +7,7 @@
   <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
   <!-- <script src="/javascripts/pixi.min.js"></script> -->
   <script src="/javascripts/sprites.js"></script>
-  <!-- <script src="/javascripts/renderer.js"></script> -->
+   <script src="/javascripts/renderer.js"></script>
   <script src="/javascripts/compromise.min.js"></script>
   <script src="/javascripts/listen.js"></script>
   <script src="/javascripts/worker.js"></script>
@@ -26,6 +26,7 @@
             myNlp(res, function(obj) {
                 //addToScene(obj);
                 console.log(obj.fileName);
+                backgroundToggle(obj.fileName);
             });
             var fragment = create('<p class=&quot;scrolling&quot;>' + fixed + '</p>');
             document.getElementById('append-here').appendChild(fragment)
@@ -34,7 +35,10 @@
       <button id="stopListen" class="btn-secondary buttons" onclick="stopRecording()">Stop</button>
   </div>
   <div class="app-container">
-      <div id="mainCanvas" class="canvas">
+      <div class="canvas">
+          <div id="mainCanvas" width="720px" height="715">
+              <img src="../images/objects/blue_potion.png" id="blue_potion">
+          </div>
       </div>
       <div style="position: relative; height:720px" id="speechBox" >
           <marquee id="append-here" class="GeneratedMarquee" direction="up" scrollamount="3" behavior="scroll">
