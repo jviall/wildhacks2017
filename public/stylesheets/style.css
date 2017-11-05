@@ -25,6 +25,8 @@ a {
     box-sizing: border-box;
     margin : 0;
     padding : 0;
+    min-width: 200px;
+    max-width: 410px;
 
     border : solid black 2px;
 }
@@ -34,7 +36,7 @@ a {
 }
 div.buttons{
     display: inline-block;
-
+    margin : 10px 0;
 }
 button.buttons {
     padding : 10px 18px 10px 18px;
@@ -52,6 +54,7 @@ button.buttons {
     height:100%;
     text-align: left;
     background-image: url("../images/scroll.gif");
+    background-repeat:no-repeat;
 }
 
 .scrolling {
