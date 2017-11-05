@@ -8,7 +8,7 @@ var ds_sprites = {
             y : 1200,
             count : 0
         },
-        cavern_bacykdrop : {
+        cavern_backdrop : {
             name : 'cavern_backdrop',
             fileName : 'cavern_backdrop.jpg',
             fileType : 'backdrop',
