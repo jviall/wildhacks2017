@@ -50,4 +50,7 @@ function backgroundToggle(fileName) {
             mace = true;
         }
     }
+    else if(fileName == "fairy.png"){
+        document.getElementById("fairy").classList.toggle("display");
+    }
 }
