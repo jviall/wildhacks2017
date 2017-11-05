@@ -18,5 +18,7 @@ function backgroundToggle(fileName) {
     else if(fileName == "gold_mask.png"){
         document.getElementById("gold_mask").classList.toggle("display");
     }
-
+    else if(fileName == "mace.png"){
+        document.getElementById("mace").classList.toggle("display");
+    }
 }
