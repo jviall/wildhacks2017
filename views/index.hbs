@@ -6,10 +6,10 @@
   <link rel="stylesheet" type="text/css" herf="/public/stylesheets/style.css">
   <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
   <script src="/javascripts/pixi.min.js"></script>
+  <script src="/javascripts/compromise.min.js"></script>
   <script src="/javascripts/listen.js"></script>
+  <script src="/javascripts/nlp.js"></script>
   <script src="/javascripts/renderer.js"></script>
-
-
 </head>
 <body>
   <h1>{{title}}</h1>
@@ -19,8 +19,12 @@
         //callMe(res);
         console.log('res:' + res);
         //appends to scrolling text
+        myNlp(res, function() {
+
+        });
         var fragment = create('<p>' + res + '</p>');
         document.getElementById('append-here').appendChild(fragment)
+        //console.log('res:' + res);
   })">Start</button>
   <button id="stopListen" class="btn-secondary buttons" onclick="stopRecording()">Stop</button>
 
