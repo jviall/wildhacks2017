@@ -16,6 +16,6 @@ var sprites = {
         }
     },
     object : {
-        blue_potion
+        
     }
 }

@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe77cf41-01b3-4e2e-9304-e799ed12153d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/objects/blue-potion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/objects/blue-shroom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/objects/brown-shroom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/objects/green-postion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/objects/red-potion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/objects/red-shroom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/objects/sowrd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/objects/wizard-hat.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/sprites.js" afterPath="$PROJECT_DIR$/public/javascripts/sprites.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,8 +29,8 @@
       <file leaf-file-name="sprites.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/sprites.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="324">
+              <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -193,7 +185,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10813000" />
+    <option name="totallyTimeSpent" value="10853000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-934" y="24" width="934" height="1056" extended-state="4" />
@@ -277,8 +269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/sprites.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="324">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding />
         </state>
       </provider>
