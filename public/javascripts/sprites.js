@@ -180,7 +180,7 @@ var ds_sprites = {
         }, 
         skull : {
             name : 'skull',
-            fileName : 'skull_1.png',
+            fileName : 'skull.png',
             fileType : 'object',
             scale : 1.0,
             sky : false,

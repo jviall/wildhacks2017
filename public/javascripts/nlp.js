@@ -40,7 +40,7 @@ function myNlp(str, callback){
 	var worker = new Worker('/javascripts/worker.js');
 	worker.addEventListener('message', function(r){
 		//console.log(r.data.length);
-		//console.log(r.data);
+		console.log(r.data);
 		for(var i = 0; i<r.data.length; i++){
 			var temp = r.data.pop();
 			getNouns(temp, function(obj) {

@@ -12,4 +12,11 @@ function backgroundToggle(fileName) {
     else if(fileName == "treasure_box.png"){
         document.getElementById("treasure_chest").classList.toggle("display");
     }
+    else if(fileName == "skull.png"){
+        document.getElementById("skull").classList.toggle("display");
+    }
+    else if(fileName == "gold_mask.png"){
+        document.getElementById("gold_mask").classList.toggle("display");
+    }
+
 }

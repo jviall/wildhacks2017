@@ -36,10 +36,22 @@ a {
 #blue_potion{
 }
 
+#skull{
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 28%;
+}
+
 .potion{
     margin-top:35%;
     width:40px;
     height:100px;
+}
+
+.mask{
+    margin-top:55%;
+    width:60px;
+    height:70px;
 }
 
 .chest{
@@ -47,6 +59,12 @@ a {
     width: 75px;
     margin-top:-23%;
 }
+
+.skeleton{
+    height: 60px;
+    width: 70px;
+}
+
 
 .initialBlue{
     display: none;
@@ -57,6 +75,13 @@ a {
     margin-top: 32%;
 }
 
+.initialMask{
+    display: none;
+    margin-left: 52%;
+    margin-top: 32%;
+    position: absolute;
+}
+
 .initialChest{
     display: none;
     background: transparent;
@@ -65,8 +90,20 @@ a {
     position: absolute;
 }
 
+.initialSkull{
+    display: none;
+}
+
 .display{
     display: initial;
+    -webkit-animation: fadein 2s;
+    animation: fadein 2s;
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 
