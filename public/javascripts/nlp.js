@@ -41,8 +41,10 @@ function myNlp(str, callback){
 	worker.addEventListener('message', function(r){
 		//console.log(r.data.length);
 		console.log(r.data);
-		for(var i = 0; i<r.data.length; i++){
-			var temp = r.data.pop();
+		var temp;
+		while((temp = r.data.pop()) != undefined){
+			// = r.data.pop();
+			console.log("popped: " + temp);
 			getNouns(temp, function(obj) {
 				console.log("Dis boi is obj: " + obj)
 				callback(obj);
@@ -55,9 +57,9 @@ function myNlp(str, callback){
 	//});
 
 	
-	var verbs = nlp(str).verbs().out('array');
+	//var verbs = nlp(str).verbs().out('array');
 	//console.log('verbs: ' + verbs);
-	var adj = nlp(str).adjectives().out('array');
+	//var adj = nlp(str).adjectives().out('array');
 	//console.log('adj: ' + adj);
 	
 	//callback();
