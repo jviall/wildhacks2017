@@ -1,7 +1,7 @@
 console.log('wudd aap');
 
 function myNlp(str, callback){
-	console.log(str);
+	//console.log(str);
 	var nouns = nlp(str).nouns().out('array');
 	console.log('nouns: ' + nouns);
 	var verbs = nlp(str).verbs().out('array');
