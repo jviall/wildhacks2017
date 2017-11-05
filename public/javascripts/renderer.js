@@ -7,6 +7,9 @@ function backgroundToggle(fileName) {
         element.classList.toggle("cave");
     }
     else if(fileName == "blue_potion.png"){
-        element.classList.toggle("display");
+        document.getElementById("blue_potion").classList.toggle("display");
+    }
+    else if(fileName == "treasure_box.png"){
+        document.getElementById("treasure_chest").classList.toggle("display");
     }
 }

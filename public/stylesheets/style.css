@@ -16,9 +16,9 @@ a {
     box-sizing: border-box;
     margin : 0 10px 0 0 ;
     padding : 0;
-    width : 70%;
+    width : 950px;
     background-color: #000000;
-    height : 50%;
+    height : 715px;
 }
 
 .forest {
@@ -34,17 +34,40 @@ a {
 }
 
 #blue_potion{
+}
+
+.potion{
+    margin-top:35%;
+    width:40px;
+    height:100px;
+}
+
+.chest{
+    height:65px;
+    width: 75px;
+    margin-top:-23%;
+}
+
+.initialBlue{
+    display: none;
     background: transparent;
     height:100px;
     width: 40px;
     margin-left: 52%;
     margin-top: 32%;
-    display: initial;
 }
 
-/*.display{
+.initialChest{
+    display: none;
+    background: transparent;
+    margin-left: 51%;
+    margin-top: 23%;
+    position: absolute;
+}
+
+.display{
     display: initial;
-}*/
+}
 
 
 
