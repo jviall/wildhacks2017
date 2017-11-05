@@ -43,12 +43,16 @@ button.buttons {
 
 
 .GeneratedMarquee {
-    font-family:Helvetica, sans-serif;
+    font-family:Luminari, fantasy;
     font-size:2em;
     line-height:1.3em;
-    color:#FFFFFF;
+    color: #000000;
     background-color:#000000;
-    padding:1.5em;
+    padding-left:.8em;
     height:100%;
+    text-align: left;
+    background-image: url("../images/scroll.gif");
+}
 
+.scrolling {
 }
