@@ -8,7 +8,7 @@ var ds_sprites = {
             y : 1200,
             count : 0
         },
-        cavern_bacykdrop : {
+        cavern_backdrop : {
             name : 'cavern_backdrop',
             fileName : 'cavern_backdrop.jpg',
             fileType : 'backdrop',
@@ -160,14 +160,33 @@ var ds_sprites = {
         },
         treasure_box : {
             name : 'treasure_box',
-            fileName : 'wizard_hat.png',
+            fileName : 'treasure_box.png',
             fileType : 'object',
             scale : 1.0,
             sky : false,
             x : 51,
             y : 41,
             count : 0
+        },
+        golden_mask : {
+            name : 'golden_mask',
+            fileName : 'gold_mask.png',
+            fileType : 'object',
+            scale : 1.0,
+            sky : false,
+            x : 34,
+            y : 46,
+            count : 0
+        }, 
+        skull : {
+            name : 'skull',
+            fileName : 'skull_1.png',
+            fileType : 'object',
+            scale : 1.0,
+            sky : false,
+            x : 98,
+            y : 105,
+            count : 0
         }
-
     }//objects{}
 }

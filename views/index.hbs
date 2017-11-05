@@ -5,11 +5,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" herf="/public/stylesheets/style.css">
   <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
-  <script src="/javascripts/pixi.min.js"></script>
+  <!-- <script src="/javascripts/pixi.min.js"></script> -->
   <script src="/javascripts/sprites.js"></script>
-  <script src="/javascripts/renderer.js"></script>
+  <!-- <script src="/javascripts/renderer.js"></script> -->
   <script src="/javascripts/compromise.min.js"></script>
   <script src="/javascripts/listen.js"></script>
+  <script src="/javascripts/worker.js"></script>
   <script src="/javascripts/nlp.js"></script>
 
 </head>
@@ -22,8 +23,9 @@
             //console.log('res:' + res);
             var fixed = res.charAt(0).toUpperCase() + res.slice(1) + '.';
             //appends to scrolling text
-            myNlp(res, function() {
-
+            myNlp(res, function(obj) {
+                //addToScene(obj);
+                console.log(obj.fileName);
             });
             var fragment = create('<p class=&quot;scrolling&quot;>' + fixed + '</p>');
             document.getElementById('append-here').appendChild(fragment)
@@ -42,7 +44,7 @@
       </div>
   </div>
 
-  <script type="text/javascript">
+<!--   <script type="text/javascript">
 
    //set up voice recognition variable
 
@@ -50,6 +52,6 @@
     if(!PIXI.utils.isWebGLSupported()){
       type = "canvas"
     }
-  </script>
+  </script> -->
 </body>
 </html>

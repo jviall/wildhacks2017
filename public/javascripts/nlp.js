@@ -1,39 +1,57 @@
 console.log('wudd aap');
-var text = ['forset', 'treasure chest', 'sword', 'mace', 'potion', 'golden mask', 'skull', 'fairy'];
+var text = { forest: ds_sprites.backdrops.forest_backdrop, 
+			treasure_chest: ds_sprites.objects.treasure_box , 
+			sword: ds_sprites.objects.sword, 
+			mace: ds_sprites.objects.mace, 
+			potion: ds_sprites.objects.red_potion, 
+			golden_mask: ds_sprites.objects.golden_mask, 
+			skull: ds_sprites.objects.skull, 
+			fairy: ds_sprites.objects.fairy};
 
-function parseNouns(str, callback){
-	var nouns = nlp(str).nouns().out('array');
-	console.log('nouns: ' + nouns);
-	callback(nouns);
+function getNouns(noun,callback){
+	//for(var i = 0; i<nouns.length; i++){
+		//console.log("found noun is: " + nouns[i] + ' ' + text.nouns[i]);
+		var splitted = noun.split(' ');
+		var nou;
+		if(splitted.length > 1){
+			nou = splitted[0] + '_' + splitted[1];
+		} else {
+			nou = noun;
+		}
+		console.log(nou);
+		if(nou in text){
+			console.log("found noun is: " + nou + ' ' + text[nou].name);
+			callback(text[nou]);
+		}
+	//}
 }
+
+//function parseNouns(str, callback){
+	//var nouns = 
+	//console.log('nouns: ' + nouns);
+	//callback(nouns);
+//}
 
 
 function myNlp(str, callback){
 	//console.log(str);
-	parseNouns(function(nouns) {
-		for(var i = 0; i<nouns.length; i++){
-			if(text.indexOf(nouns[i]) > -1){
-				switch(nouns[i]){
-					case 'forset':
-						break;
-					case 'treasure chest':
-						break;
-					case 'sword':
-						break;
-					case 'mace':
-						break;
-					case 'potion':
-						break;
-					case 'golden mask':
-						break;
-					case 'skull':
-						break;
-					case 'fairy':
-						break;
-				}
-			}
+//	parseNouns(str, function(nouns) {
+	var worker = new Worker('/javascripts/worker.js');
+	worker.addEventListener('message', function(r){
+		//console.log(r.data.length);
+		//console.log(r.data);
+		for(var i = 0; i<r.data.length; i++){
+			var temp = r.data.pop();
+			getNouns(temp, function(obj) {
+				console.log("Dis boi is obj: " + obj)
+				callback(obj);
+			});
 		}
-	});
+	}, false);
+	
+	worker.postMessage(str);
+		//callback(obj);
+	//});
 
 	
 	var verbs = nlp(str).verbs().out('array');
@@ -41,5 +59,5 @@ function myNlp(str, callback){
 	var adj = nlp(str).adjectives().out('array');
 	//console.log('adj: ' + adj);
 	
-	callback();
+	//callback();
 }
