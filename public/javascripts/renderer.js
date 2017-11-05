@@ -29,4 +29,7 @@ function backgroundToggle(fileName) {
     else if(fileName == "mace.png"){
         document.getElementById("mace").classList.toggle("display");
     }
+    else if(fileName == "fairy.png"){
+        document.getElementById("fairy").classList.toggle("display");
+    }
 }

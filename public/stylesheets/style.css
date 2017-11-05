@@ -70,14 +70,28 @@ a {
     width: 70px;
 }
 
+.fairy{
+    height: 150px;
+    width: 150px;
+}
+
+.initialFairy{
+    display:none;
+    background: transparent;
+    height:100px;
+    width: 40px;
+    padding-left: 52%;
+    padding-top: 4%;
+    position: absolute;
+}
 
 .initialMace{
     display:none;
     background: transparent;
     height:100px;
     width: 40px;
-    padding-left: 2%;
-    padding-top: 40%;
+    padding-left: 58%;
+    padding-top: 26%;
     position: absolute;
 }
 
@@ -92,8 +106,8 @@ a {
 
 .initialMask{
     display: none;
-    margin-left: 52%;
-    margin-top: 32%;
+    margin-left: 54%;
+    margin-top: 22%;
     position: absolute;
 }
 
