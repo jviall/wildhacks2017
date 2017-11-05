@@ -6,10 +6,12 @@
   <link rel="stylesheet" type="text/css" herf="/public/stylesheets/style.css">
   <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
   <script src="/javascripts/pixi.min.js"></script>
+  <script src="/javascripts/sprites.js"></script>
+  <script src="/javascripts/renderer.js"></script>
   <script src="/javascripts/compromise.min.js"></script>
   <script src="/javascripts/listen.js"></script>
   <script src="/javascripts/nlp.js"></script>
-  <script src="/javascripts/renderer.js"></script>
+
 </head>
 <body>
   <h1>{{title}}</h1>
@@ -17,7 +19,7 @@
   <div class="buttons">
       <button id="listen" class="btn-danger buttons" onclick="startRecord(function(res) {
             //callMe(res);
-            console.log('res:' + res);
+            //console.log('res:' + res);
             var fixed = res.charAt(0).toUpperCase() + res.slice(1) + '.';
             //appends to scrolling text
             myNlp(res, function() {

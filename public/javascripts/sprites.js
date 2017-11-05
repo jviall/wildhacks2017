@@ -5,14 +5,16 @@ var ds_sprites = {
             fileName : 'forest_backdrop.jpg',
             fileType : 'backdrop',
             x : 1920,
-            y : 1200
+            y : 1200,
+            count : 0
         },
         cavern_bacykdrop : {
             name : 'cavern_backdrop',
             fileName : 'cavern_backdrop.jpg',
             fileType : 'backdrop',
             x : 1191,
-            y : 670
+            y : 670,
+            count : 0
         }
     }, //backdrops
     objects : {
@@ -23,7 +25,8 @@ var ds_sprites = {
             scale : 1.0,
             sky: false,
             x: 20,
-            y: 44
+            y: 44,
+            count : 0
         },
         blue_shroom: {
             name: 'blue_shroom',
@@ -32,7 +35,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 22,
-            y : 22
+            y : 22,
+            count : 0
         },
         bow : {
             name : 'bow',
@@ -41,7 +45,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 20,
-            y : 77
+            y : 77,
+            count : 0
         },
         brown_shroom  : {
             name : 'brown_shroom',
@@ -50,7 +55,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 20,
-            y : 20
+            y : 20,
+            count : 0
         },
         fairy : {
             name : 'fairy',
@@ -59,7 +65,8 @@ var ds_sprites = {
             scale : 0.8,
             sky : true,
             x : 145,
-            y : 136
+            y : 136,
+            count : 0
         },
         green_potion : {
             name : 'green_potion',
@@ -68,7 +75,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 22,
-            y : 38
+            y : 38,
+            count : 0
         },
         mace : {
             name : 'mace',
@@ -77,7 +85,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 49,
-            y : 41
+            y : 41,
+            count : 0
         },
         red_potion : {
             name : 'red_potion',
@@ -86,7 +95,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 19,
-            y : 42
+            y : 42,
+            count : 0
         },
         red_shroom : {
             name : 'red_shroom',
@@ -95,7 +105,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 21,
-            y : 22
+            y : 22,
+            count : 0
         },
         ring : {
             name : 'ring',
@@ -104,7 +115,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 20,
-            y : 21
+            y : 21,
+            count : 0
         },
         scroll : {
             name : 'scroll',
@@ -113,7 +125,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 20,
-            y : 21
+            y : 21,
+            count : 0
         },
         shield : {
             name : 'shield',
@@ -122,7 +135,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 20,
-            y : 21
+            y : 21,
+            count : 0
         },
         sword : {
             name : 'sword',
@@ -131,7 +145,8 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 24,
-            y : 77
+            y : 77,
+            count : 0
         },
         wizard_hat : {
             name : 'wizard_hat',
@@ -140,7 +155,18 @@ var ds_sprites = {
             scale : 1.0,
             sky : false,
             x : 49,
-            y : 39
+            y : 39,
+            count : 0
+        },
+        treasure_box : {
+            name : 'treasure_box',
+            fileName : 'wizard_hat.png',
+            fileType : 'object',
+            scale : 1.0,
+            sky : false,
+            x : 51,
+            y : 41,
+            count : 0
         }
 
     }//objects{}
