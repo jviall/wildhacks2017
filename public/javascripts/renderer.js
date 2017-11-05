@@ -1,9 +1,8 @@
-
+var loader = PIXI.loader;
 var addToScene = undefined;
 var renderer = undefined;
 window.onload = function(){
     "use strict";
-    var mainCanvas = document.getElementById('mainCanvas');
     var canvasW = 1080;
     var canvasH = 720;
 
@@ -11,23 +10,19 @@ window.onload = function(){
     mainCanvas.height = canvasH;
     document.getElementById('speechBox').style.width = canvasH;
     renderer = PIXI.autoDetectRenderer(canvasW, canvasH);
+    document.getElementById("mainCanvas").appendChild(renderer.view);
 
     var stage = new PIXI.Container();
-    // Layer Containers
+    var imgObject;
 
-    // var testimg = document.createElement('img');
-    // testimg.setAttribute('src', '../images/backdrops/forest_backdrop.jpg');
-    // document.body.appendChild(testimg);
-    //stage.addChild(new PIXI.Sprite.fromImage('../images/backdrops/forest_backdrop.jpg'))
-
-    addToScene = function(imgObject){
+    addToScene = function(obj){
         try {
+            imgObject = obj;
             var fileName = imgObject.fileName;
             var objectType = imgObject.fileType;
             var filePath = '../images/'+ objectType +'s/' + fileName;
 
-            PIXI.Loader.add(imgObject.name, filePath).load(setupSprite);
-
+            loader.add(imgObject.name, filePath).load(setupSprite);
 
         } catch(e){
             console.log("addToScene(imgObject : string) : something wrong with imgObject (probably). Value: " + imgObject + " Error Message: " + e);
@@ -35,9 +30,15 @@ window.onload = function(){
         }
     }
     var setupSprite = function () {
-        var sprite = new PIXI.Sprite.(
+
+        var fileName = imgObject.fileName;
+        var objectType = imgObject.fileType;
+        var filePath = '../images/'+ objectType +'s/' + fileName;
+
+        var sprite = new PIXI.Sprite(
+            loader.resources[imgObject.name].texture
         );
-        console.log(sprite);
+
         //If this object has a scale property, set it
         if (imgObject.scale)
             sprite.scale(imgObject.scale);
@@ -48,6 +49,14 @@ window.onload = function(){
             sprite.zIndex = 0;
             sprite.x = 0;
             sprite.y = 0;
+
+            var bdCoords = scaleToRatio(imgObject.x, imgObject.y);
+            if(bdCoords[0] == imgObject.x)
+                sprite.height = bdCoords[1];
+            else
+                sprite.width = bdCoords[0];
+
+            stage.addChild(sprite);
         }
         else { // the object type is 'objects
             sprite.zIndex = 5;
@@ -60,10 +69,20 @@ window.onload = function(){
 
             stage.addChild(sprite);
         }
+
+        renderer.render(stage);
     }
-    addToScene(ds_sprites.backdrops.forest_backdrop);
+    function scaleToRatio(img_x, img_y){
+        var wi = img_x;
+        var hi = img_y;
+        var ri = wi/hi;
+        var rs = canvasW/canvasH;
 
-    console.log(stage.children);
+        return (rs > ri ? [wi * canvasH/hi, canvasH] : [canvasW, hi * canvasW/wi]);
+    }
 
-    setTimeout(renderer.render(stage), 10);
+    // addToScene(ds_sprites.backdrops.forest_backdrop);
+
+
+    //setTimeout(renderer.render(stage), 100);
 }
