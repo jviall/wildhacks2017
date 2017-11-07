@@ -1,4 +1,4 @@
-# wildhacks2017
+# SpeechDruid
 
 ## What it does:
 
